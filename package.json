@@ -1,0 +1,9 @@
+{
+  "name": "discord-info-bot",
+  "description": "Simple Discord bot with few information commands",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^9.0.1"
+  }
+}
