@@ -22,5 +22,13 @@ module.exports = {
     "irc": {
         "title": "Połączenie z IRC",
         "content": "Spokojnie, osoby wypowiadające się podobnie do ludzi z plakietką BOT, nie są rzeczywistymi botami. To prawdziwe osoby z naszego dawnego [czatu IRC](https://forum.pasja-informatyki.pl/chat-irc), z którego wiadomości na kanale #offtop są synchronizowane. Warto wiedzieć, że większość opcji formatowania z Discorda nie zadziała właściwie na [IRC](https://pl.wikipedia.org/wiki/Internet_Relay_Chat)."
+    },
+    "test": {
+        "title": "test",
+        "content": "test...."
+    },
+    "trivial": {
+        "title": "Ty leniu!",
+        "content": "Stwierdzenie \"nie\u0020działa\" nic nie mówi. Podaj więcej szczegółów, żeby ktoś mógł Ci pomóc."
     }
 };

@@ -8,4 +8,6 @@ Używany na [naszym serwerze Discord](https://forum.pasja-informatyki.pl/chat-di
 
 1. Przygotuj plik `.env` na podstawie `.env.example` lub zdefiniuj potrzebne zmienne środowiskowe.
 2. `npm install`
-3. `node main.js`
+3.
+    a) `npm run dev` uruchamia apkę z auto restartem (`nodemon`)
+    b) `node main.js`
