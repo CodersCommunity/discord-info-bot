@@ -1,3 +1,4 @@
+import mentionHandler from './handlers/EveryoneAndHereMentionMessage'
 const Discord = require('discord.js');
 const commands = require('./commands');
 require('dotenv').config();
@@ -30,29 +31,7 @@ client.on('ready', () => {
         }
     });
 });
-client.on('message', message => { //Ten event wykonuje się, gdy bot wykryje wiadomość
-    const pingEmbed = new Discord.MessageEmbed()
-	.setColor('#eb1540')
-	.setTitle('Nie wołaj wszystkich!')
-    .setThumbnail('https://cdn.discordapp.com/attachments/617673807213232128/852887484542615572/Pingsock.png')
-    .setDescription('\nRozumiemy, że potrzebujesz pomocy, ale nie wszyscy chcą zostać o tym powiadomieni.\n Jest nas tutaj dużo i nie ma sensu, aby każdy dostał bezpośrednio taką informację.\n Nie trudno sobie wyobrazić jak irytujące byłoby, gdyby każdy wołał wszystkich do każdego tematu.\n Dlatego zadaj pytanie i po prostu poczekaj - jeśli ktoś będzie wiedział i mógł, to na pewno spróbuje odpowiedzieć.');
-
-    if (message.content.includes("@everyone")) { //Jeśli wiadomość zawiera @everyone..
-        try{
-            if(!message.member.hasPermission('MENTION_EVERYONE')) //Sprawdzamy, czy wysyłający ma uprawnienia do wzmianki @everyone, jeśli nie to bot wysyła wiadomość
-                message.author.send(pingEmbed)
-        }catch{
-            console.log(message.author.username + " wysłał ping w wiadomości prywatnej do bota, hmm..")
-        }
-        
-    } else {
-        if(message.content.includes("@here")) //Jeśli wiadomość zawiera @here..
-        try{
-            if(!message.member.hasPermission('MENTION_EVERYONE')) //Sprawdzamy, czy wysyłający ma uprawnienia do wzmianki @everyone, jeśli nie to bot wysyła wiadomość
-                message.author.send(pingEmbed)
-        }catch{
-            console.log(message.author.username + " wysłał ping w wiadomości prywatnej do bota, hmm..")
-        }
-    }
- });
+client.on('message', message => { 
+    mentionHandler();
+});
 client.login(process.env.TOKEN);
