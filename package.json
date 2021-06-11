@@ -3,13 +3,18 @@
   "description": "Simple Discord bot with few information commands",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon main.js"
+    "eslint": "eslint ./src",
+    "prettier": "prettier --write ./src",
+    "dev": "nodemon --exec \"npm run eslint && npm run prettier && npm run serve\"",
+    "serve": "node ./src/main.js"
   },
   "dependencies": {
     "discord.js": "^12.5.3",
     "dotenv": "^9.0.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "eslint": "^7.28.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1"
   }
 }
