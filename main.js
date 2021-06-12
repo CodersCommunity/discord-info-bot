@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const commands = require('./commands');
-const EveryoneAndHereMentionMessage = require('./handlers/EveryoneAndHereMentionMessage');
+require('./handlers/mentionHandler');
 require('dotenv').config();
-
 const client = new Discord.Client();
 
 client.on('ready', () => {
@@ -32,6 +31,6 @@ client.on('ready', () => {
     });
 });
 client.on('message', message => { 
-    EveryoneAndHereMentionMessage.mentionHandler(message);
+    mentionHandler.handler(message);
 });
 client.login(process.env.TOKEN);
