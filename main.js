@@ -1,6 +1,6 @@
-import mentionHandler from './handlers/EveryoneAndHereMentionMessage'
 const Discord = require('discord.js');
 const commands = require('./commands');
+const EveryoneAndHereMentionMessage = require('./handlers/EveryoneAndHereMentionMessage');
 require('dotenv').config();
 
 const client = new Discord.Client();
@@ -32,6 +32,6 @@ client.on('ready', () => {
     });
 });
 client.on('message', message => { 
-    mentionHandler();
+    EveryoneAndHereMentionMessage.mentionHandler(message);
 });
 client.login(process.env.TOKEN);
