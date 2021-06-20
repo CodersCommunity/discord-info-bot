@@ -2,8 +2,18 @@
   "name": "discord-info-bot",
   "description": "Simple Discord bot with few information commands",
   "license": "MIT",
+  "scripts": {
+    "dev":"docker build -t discord-info-dev -f Dockerfile-dev . && docker run -it -v ${PWD}:/app discord-info-dev",
+    "prestart": "docker build -t discord-info-bot .",
+    "start": "docker run discord-info-bot ",
+    "start:prod": "node ./main.js",
+    "start:watch": "nodemon ./main.js"
+  },
   "dependencies": {
     "discord.js": "^12.5.3",
     "dotenv": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
