@@ -17,9 +17,9 @@ function mentionHandler(message){
       .setDescription(EMBED_DESCRIPTION);
     const mentions = message.content.includes(MENTIONS_DICT.EVERYONE) || message.content.includes(MENTIONS_DICT.HERE);
     const hasPermission = message.member.hasPermission(MENTION_PERMISSION);
-    
+
     if (mentions && !hasPermission) {
-        message.author.send(pingEmbed).catch(console.error);
+        message.reply(pingEmbed).catch(console.error);
     }
 }
 
