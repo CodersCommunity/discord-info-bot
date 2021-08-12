@@ -18,9 +18,5 @@ module.exports = {
     "gotowce": {
         "title": "Nie dajemy gotowców",
         "content": "Wybacz, ale nikt nie odrobi Twojego zadania dla Ciebie, jeżeli sam nie masz ochoty zrobić nic. Nawet gdyby tak się stało, to problem powróci już przy kolejnym zadaniu - otrzymując tylko rozwiązanie nadal się niczego nie nauczysz.\n\nZaangażuj się, poszukaj, spróbuj sam. Zapytaj konkretnie czego nie wiesz i powiedz jak możemy Ci pomóc, a wtedy pewnie ktoś spróbuje doradzić."
-    },
-    "irc": {
-        "title": "Połączenie z IRC",
-        "content": "Spokojnie, osoby wypowiadające się podobnie do ludzi z plakietką BOT, nie są rzeczywistymi botami. To prawdziwe osoby z naszego dawnego [czatu IRC](https://forum.pasja-informatyki.pl/chat-irc), z którego wiadomości na kanale #offtop są synchronizowane. Warto wiedzieć, że większość opcji formatowania z Discorda nie zadziała właściwie na [IRC](https://pl.wikipedia.org/wiki/Internet_Relay_Chat)."
     }
 };

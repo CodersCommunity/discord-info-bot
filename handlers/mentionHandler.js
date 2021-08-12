@@ -12,10 +12,10 @@ const EMBED_DESCRIPTION = '\nRozumiemy, że potrzebujesz pomocy, ale nie wszyscy
 
 function mentionHandler(message){
     const pingEmbed = new Discord.MessageEmbed()
-        .setColor(EMBED_COLOR)
-        .setTitle(EMBED_TITLE)
-        .setThumbnail(EMBED_THUMBNAIL)
-        .setDescription(EMBED_DESCRIPTION);
+      .setColor(EMBED_COLOR)
+      .setTitle(EMBED_TITLE)
+      .setThumbnail(EMBED_THUMBNAIL)
+      .setDescription(EMBED_DESCRIPTION);
     const mentions = message.content.includes(MENTIONS_DICT.EVERYONE) || message.content.includes(MENTIONS_DICT.HERE);
 
     try{ //needed, if someone sends private message to bot, it crashes without try..catch
@@ -28,7 +28,6 @@ function mentionHandler(message){
     catch(err){
         console.error(err);
     }
-
 }
 
 module.exports = mentionHandler;

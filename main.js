@@ -1,10 +1,9 @@
 const Discord = require('discord.js');
 const commands = require('./commands');
-require('discord-reply');
-const client = new Discord.Client();
 const mentionHandler = require('./handlers/mentionHandler');
+require('discord-reply');
 require('dotenv').config();
-
+const client = new Discord.Client();
 
 client.on('ready', () => {
     for (const command in commands) {
