@@ -3,6 +3,7 @@
   "description": "Simple Discord bot with few information commands",
   "license": "MIT",
   "dependencies": {
+    "discord-reply": "^0.1.2",
     "discord.js": "^12.5.3",
     "dotenv": "^9.0.1"
   }

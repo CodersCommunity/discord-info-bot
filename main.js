@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
 const commands = require('./commands');
-require('./handlers/mentionHandler');
-require('dotenv').config();
+require('discord-reply');
 const client = new Discord.Client();
+const mentionHandler = require('./handlers/mentionHandler');
+require('dotenv').config();
+
 
 client.on('ready', () => {
     for (const command in commands) {
@@ -30,7 +32,7 @@ client.on('ready', () => {
         }
     });
 });
-client.on('message', message => { 
-    mentionHandler.handler(message);
+client.on('message', (message) => {
+    mentionHandler(message);
 });
 client.login(process.env.TOKEN);
