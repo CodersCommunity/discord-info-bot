@@ -7,5 +7,5 @@ Używany na [naszym serwerze Discord](https://forum.pasja-informatyki.pl/chat-di
 ## Uruchomienie
 
 1. Przygotuj plik `.env` na podstawie `.env.example` lub zdefiniuj potrzebne zmienne środowiskowe.
-2. `npm install`
-3. `node main.js`
+2. `bun install`
+3. `bun start:prod` lub `bun start:watch` w środowisku progamisty

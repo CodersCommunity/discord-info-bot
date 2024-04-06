@@ -1,12 +1,12 @@
-FROM node:14-alpine
+FROM oven/bun:1.1.2
 
 ENV NODE_ENV=production
 WORKDIR /app
 
-COPY ./package*.json ./
+COPY ./package*.json bun.lockb ./
 
-RUN npm ci
+RUN bun install --frozen-lockfile
 
 COPY . .
 
-CMD ["npm", "run", "start:prod"]
+CMD ["bun", "run", "start:prod"]

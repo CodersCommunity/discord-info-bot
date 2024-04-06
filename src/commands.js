@@ -1,4 +1,4 @@
-module.exports = {
+export const commands = {
     "kod": {
         "title": "Jak wstawić kod?",
         "content": "Do umieszczenia kodu służy specjalny bloczek:\n" +
