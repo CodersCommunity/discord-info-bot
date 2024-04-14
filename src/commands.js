@@ -1,4 +1,4 @@
-module.exports = {
+export const commands = {
     "kod": {
         "title": "Jak wstawić kod?",
         "content": "Do umieszczenia kodu służy specjalny bloczek:\n" +
@@ -9,7 +9,7 @@ module.exports = {
             "\\`\\`\\`py\n" +
             "print('Hello world')\n" +
             "\\`\\`\\`\n" +
-            "Możesz też umieścić kod w serwisie typu [Pastebin](https://pastebin.com/), [GitHub](https://github.com/), [CodePen](https://codepen.io/) i wkleić tu linka. Nie wstawiaj kodu jako screeny.\n\nSzczegółowe informacje o formatowaniu wiadomości znajdują się na kanale #info."
+            "Możesz też umieścić kod w serwisie typu [Pastebin](https://pastebin.com/), [GitHub](https://github.com/), [CodePen](https://codepen.io/) i wkleić tu linka. Nie wstawiaj kodu jako screeny.\n\nSzczegółowe informacje o formatowaniu wiadomości znajdują się na kanale <#666293682848268308>."
     },
     "pytanie": {
         "title": "Zadaj konkretne pytanie!",
